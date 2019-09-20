@@ -8,7 +8,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 // 引用axios，并设置基础URL为后端服务api地址
 const axios = require('axios');
-axios.defaults.baseURL = 'http://localhost:5000/demo';
+axios.defaults.baseURL = 'http://microproject.jx-staging.treasuremountain.cn/demo';
 // 将API方法绑定到全局
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false;
