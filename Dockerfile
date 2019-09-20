@@ -12,7 +12,7 @@ RUN ln -sf /dev/stdout /var/log/nginx/access.log \
 RUN cp -r dist/* /app/ \
     && rm -rf /user/src/app
 COPY ./nginx.conf /etc/nginx/nginx.conf
-ENV PORT 80
-EXPOSE 80
+ENV PORT 8080
+EXPOSE 8080
 CMD sh -c "exec nginx -c /etc/nginx/nginx.conf -g 'daemon off;'"
 
