@@ -29,6 +29,12 @@
       </el-table-column>
     </el-table>
     <el-button type="primary" @click="open1(false)" id="id1">添加</el-button>
+    <br>
+    <br>
+    <br>
+    <a href="http://www.beian.miit.gov.cn" target="_blank">
+      <span class="1h">冀ICP备19010705号</span>
+    </a>
   </div>
 
 </template>
