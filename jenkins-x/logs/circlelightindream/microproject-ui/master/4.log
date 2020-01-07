@@ -1,0 +1,501 @@
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-bkw7f[0m
+{"level":"warn","ts":1578385501.6582873,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1578385501.658959,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-dj4l2[0m
+{"level":"warn","ts":1578385502.0932226,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1578385502.1234655,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-circlelightindream-micropr-rbcjk[0m
+{"level":"warn","ts":1578385508.1648626,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1578385511.8220832,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/******************/microproject-ui.git @ 49e7f9597701e55a6bb5d726349e73ca83d012b9 in path /workspace/source"}
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:49e7f9597701e55a6bb5d726349e73ca83d012b9
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.**/jenkins-x-versions
+Effective pipeline written to jenkins-x-release-effective.yml
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: echo \$(**-release-version) > VERSION
+
+running command: ** step tag --version \$(cat VERSION)
+Updating chart version in charts/microproject-ui/Chart.yaml to 0.0.10
+Updating repository in charts/microproject-ui/values.yaml to registry.cn-zhangjiakou.aliyuncs.com/******************/microproject-ui
+Updating tag in charts/microproject-ui/values.yaml to 0.0.10
+Tag v0.0.10 created and pushed to remote origin
+
+WARNING: failed to find secret kaniko-secret in namespace **: secrets "kaniko-secret" not found
+PipelineActivity for ******************-microproject-ui-master-4
+Applying changes 
+upserted PipelineResource ******************-microproject for the git repository https://github.com/******************/microproject-ui.git
+upserted Task ******************-microproject-6l5df-from-build-pack-4
+upserted Pipeline ******************-microproject-6l5df-4
+created PipelineRun ******************-microproject-6l5df-4
+created PipelineStructure ******************-microproject-6l5df-4
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-k788x[0m
+{"level":"warn","ts":1578385643.6990669,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1578385643.6995463,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-vx2xq[0m
+{"level":"warn","ts":1578385644.6953342,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1578385644.696448,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/charts/microproject-ui\""}
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-circlelightindream-microproject-cvd49[0m
+{"level":"warn","ts":1578385652.7431173,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1578385661.121466,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/******************/microproject-ui.git @ v0.0.10 in path /workspace/source"}
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:49e7f9597701e55a6bb5d726349e73ca83d012b9
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npmrc[0m
+WARNING: failed to find Secret npm-token in namespace **
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-install[0m
+
+> uglifyjs-webpack-plugin@0.4.6 postinstall /workspace/source/node_modules/webpack/node_modules/uglifyjs-webpack-plugin
+> node lib/post_install.js
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.7 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.7: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 1106 packages from 650 contributors and audited 11516 packages in 41.053s
+found 313 vulnerabilities (1 low, 9 moderate, 303 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-npm-test[0m
+
+> vue@1.0.0 test /workspace/source
+> echo 'Error: no test specified'
+
+Error: no test specified
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image node:10-slim          
+2020/01/07 08:28:26 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0007] Error while retrieving image from cache: getting file info: stat /workspace/sha256:7da09bec069149d866c112c6dffe6b5ef51e1bcc45afb88650e47055fef53c3f: no such file or directory 
+[36mINFO[0m[0007] Downloading base image node:10-slim          
+2020/01/07 08:28:33 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0012] Checking for cached layer registry.cn-zhangjiakou.aliyuncs.com/todo/cache:181c104b38900028b8176e181e9003ac960ea65efd477bbd03a3a913befe8094... 
+[36mINFO[0m[0012] No cached layer found for cmd RUN apt-get update  && apt-get install -y nginx 
+[36mINFO[0m[0012] Unpacking rootfs as cmd RUN apt-get update  && apt-get install -y nginx requires it. 
+[36mINFO[0m[0969] Taking snapshot of full filesystem...        
+[36mINFO[0m[0970] RUN apt-get update  && apt-get install -y nginx 
+[36mINFO[0m[0970] cmd: /bin/sh                                 
+[36mINFO[0m[0970] args: [-c apt-get update  && apt-get install -y nginx] 
+Ign:2 http://deb.debian.org/debian stretch InRelease
+Get:3 http://deb.debian.org/debian stretch-updates InRelease [91.0 kB]
+Get:1 http://security-cdn.debian.org/debian-security stretch/updates InRelease [94.3 kB]
+Get:4 http://deb.debian.org/debian stretch Release [118 kB]
+Get:5 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 Packages [513 kB]
+Get:6 http://deb.debian.org/debian stretch-updates/main amd64 Packages [27.9 kB]
+Get:7 http://deb.debian.org/debian stretch Release.gpg [2365 B]
+Get:8 http://deb.debian.org/debian stretch/main amd64 Packages [7086 kB]
+Fetched 7932 kB in 42s (188 kB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  fontconfig-config fonts-dejavu-core geoip-database libbsd0 libexpat1
+  libfontconfig1 libfreetype6 libgd3 libgeoip1 libicu57 libjbig0
+  libjpeg62-turbo libnginx-mod-http-auth-pam libnginx-mod-http-dav-ext
+  libnginx-mod-http-echo libnginx-mod-http-geoip
+  libnginx-mod-http-image-filter libnginx-mod-http-subs-filter
+  libnginx-mod-http-upstream-fair libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libpng16-16 libtiff5 libwebp6 libx11-6
+  libx11-data libxau6 libxcb1 libxdmcp6 libxml2 libxpm4 libxslt1.1
+  nginx-common nginx-full sgml-base ucf xml-core
+Suggested packages:
+  libgd-tools geoip-bin fcgiwrap nginx-doc ssl-cert sgml-base-doc debhelper
+The following NEW packages will be installed:
+  fontconfig-config fonts-dejavu-core geoip-database libbsd0 libexpat1
+  libfontconfig1 libfreetype6 libgd3 libgeoip1 libicu57 libjbig0
+  libjpeg62-turbo libnginx-mod-http-auth-pam libnginx-mod-http-dav-ext
+  libnginx-mod-http-echo libnginx-mod-http-geoip
+  libnginx-mod-http-image-filter libnginx-mod-http-subs-filter
+  libnginx-mod-http-upstream-fair libnginx-mod-http-xslt-filter
+  libnginx-mod-mail libnginx-mod-stream libpng16-16 libtiff5 libwebp6 libx11-6
+  libx11-data libxau6 libxcb1 libxdmcp6 libxml2 libxpm4 libxslt1.1 nginx
+  nginx-common nginx-full sgml-base ucf xml-core
+0 upgraded, 39 newly installed, 0 to remove and 0 not upgraded.
+Need to get 17.3 MB of archives.
+After this operation, 55.7 MB of additional disk space will be used.
+Get:2 http://deb.debian.org/debian stretch/main amd64 libxau6 amd64 1:1.0.8-1 [20.7 kB]
+Get:3 http://deb.debian.org/debian stretch/main amd64 sgml-base all 1.29 [14.8 kB]
+Get:4 http://deb.debian.org/debian stretch/main amd64 libicu57 amd64 57.1-6+deb9u3 [7705 kB]
+Get:1 http://security-cdn.debian.org/debian-security stretch/updates/main amd64 libexpat1 amd64 2.2.0-2+deb9u3 [83.7 kB]
+Get:5 http://deb.debian.org/debian stretch/main amd64 libxml2 amd64 2.9.4+dfsg1-2.2+deb9u2 [920 kB]
+Get:6 http://deb.debian.org/debian stretch/main amd64 ucf all 3.0036 [70.2 kB]
+Get:7 http://deb.debian.org/debian stretch/main amd64 fonts-dejavu-core all 2.37-1 [1068 kB]
+Get:8 http://deb.debian.org/debian stretch/main amd64 fontconfig-config all 2.11.0-6.7 [271 kB]
+Get:9 http://deb.debian.org/debian stretch/main amd64 geoip-database all 20170512-1 [2112 kB]
+Get:10 http://deb.debian.org/debian stretch/main amd64 libbsd0 amd64 0.8.3-1 [83.0 kB]
+Get:11 http://deb.debian.org/debian stretch/main amd64 libpng16-16 amd64 1.6.28-1+deb9u1 [280 kB]
+Get:12 http://deb.debian.org/debian stretch/main amd64 libfreetype6 amd64 2.6.3-3.2 [438 kB]
+Get:13 http://deb.debian.org/debian stretch/main amd64 libfontconfig1 amd64 2.11.0-6.7+b1 [331 kB]
+Get:14 http://deb.debian.org/debian stretch/main amd64 libjpeg62-turbo amd64 1:1.5.1-2 [134 kB]
+Get:15 http://deb.debian.org/debian stretch/main amd64 libjbig0 amd64 2.1-3.1+b2 [31.0 kB]
+Get:16 http://deb.debian.org/debian stretch/main amd64 libtiff5 amd64 4.0.8-2+deb9u4 [238 kB]
+Get:17 http://deb.debian.org/debian stretch/main amd64 libwebp6 amd64 0.5.2-1 [235 kB]
+Get:18 http://deb.debian.org/debian stretch/main amd64 libxdmcp6 amd64 1:1.1.2-3 [26.3 kB]
+Get:19 http://deb.debian.org/debian stretch/main amd64 libxcb1 amd64 1.12-1 [133 kB]
+Get:20 http://deb.debian.org/debian stretch/main amd64 libx11-data all 2:1.6.4-3+deb9u1 [287 kB]
+Get:21 http://deb.debian.org/debian stretch/main amd64 libx11-6 amd64 2:1.6.4-3+deb9u1 [748 kB]
+Get:22 http://deb.debian.org/debian stretch/main amd64 libxpm4 amd64 1:3.5.12-1 [49.1 kB]
+Get:23 http://deb.debian.org/debian stretch/main amd64 libgd3 amd64 2.2.4-2+deb9u5 [132 kB]
+Get:24 http://deb.debian.org/debian stretch/main amd64 libgeoip1 amd64 1.6.9-4 [90.5 kB]
+Get:25 http://deb.debian.org/debian stretch/main amd64 nginx-common all 1.10.3-1+deb9u3 [105 kB]
+Get:26 http://deb.debian.org/debian stretch/main amd64 libnginx-mod-http-auth-pam amd64 1.10.3-1+deb9u3 [86.1 kB]
+Get:27 http://deb.debian.org/debian stretch/main amd64 libnginx-mod-http-dav-ext amd64 1.10.3-1+deb9u3 [87.9 kB]
+Get:28 http://deb.debian.org/debian stretch/main amd64 libnginx-mod-http-echo amd64 1.10.3-1+deb9u3 [97.2 kB]
+Get:29 http://deb.debian.org/debian stretch/main amd64 libnginx-mod-http-geoip amd64 1.10.3-1+deb9u3 [87.3 kB]
+Get:30 http://deb.debian.org/debian stretch/main amd64 libnginx-mod-http-image-filter amd64 1.10.3-1+deb9u3 [90.3 kB]
+Get:31 http://deb.debian.org/debian stretch/main amd64 libnginx-mod-http-subs-filter amd64 1.10.3-1+deb9u3 [89.2 kB]
+Get:32 http://deb.debian.org/debian stretch/main amd64 libnginx-mod-http-upstream-fair amd64 1.10.3-1+deb9u3 [89.4 kB]
+Get:33 http://deb.debian.org/debian stretch/main amd64 libxslt1.1 amd64 1.1.29-2.1+deb9u1 [233 kB]
+Get:34 http://deb.debian.org/debian stretch/main amd64 libnginx-mod-http-xslt-filter amd64 1.10.3-1+deb9u3 [89.1 kB]
+Get:35 http://deb.debian.org/debian stretch/main amd64 libnginx-mod-mail amd64 1.10.3-1+deb9u3 [117 kB]
+Get:36 http://deb.debian.org/debian stretch/main amd64 libnginx-mod-stream amd64 1.10.3-1+deb9u3 [110 kB]
+Get:37 http://deb.debian.org/debian stretch/main amd64 nginx-full amd64 1.10.3-1+deb9u3 [459 kB]
+Get:38 http://deb.debian.org/debian stretch/main amd64 nginx all 1.10.3-1+deb9u3 [81.8 kB]
+Get:39 http://deb.debian.org/debian stretch/main amd64 xml-core all 0.17 [23.2 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 17.3 MB in 9min 45s (29.6 kB/s)
+Selecting previously unselected package libxau6:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 7102 files and directories currently installed.)
+Preparing to unpack .../00-libxau6_1%3a1.0.8-1_amd64.deb ...
+Unpacking libxau6:amd64 (1:1.0.8-1) ...
+Selecting previously unselected package sgml-base.
+Preparing to unpack .../01-sgml-base_1.29_all.deb ...
+Unpacking sgml-base (1.29) ...
+Selecting previously unselected package libicu57:amd64.
+Preparing to unpack .../02-libicu57_57.1-6+deb9u3_amd64.deb ...
+Unpacking libicu57:amd64 (57.1-6+deb9u3) ...
+Selecting previously unselected package libxml2:amd64.
+Preparing to unpack .../03-libxml2_2.9.4+dfsg1-2.2+deb9u2_amd64.deb ...
+Unpacking libxml2:amd64 (2.9.4+dfsg1-2.2+deb9u2) ...
+Selecting previously unselected package ucf.
+Preparing to unpack .../04-ucf_3.0036_all.deb ...
+Moving old data out of the way
+Unpacking ucf (3.0036) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../05-fonts-dejavu-core_2.37-1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../06-fontconfig-config_2.11.0-6.7_all.deb ...
+Unpacking fontconfig-config (2.11.0-6.7) ...
+Selecting previously unselected package geoip-database.
+Preparing to unpack .../07-geoip-database_20170512-1_all.deb ...
+Unpacking geoip-database (20170512-1) ...
+Selecting previously unselected package libbsd0:amd64.
+Preparing to unpack .../08-libbsd0_0.8.3-1_amd64.deb ...
+Unpacking libbsd0:amd64 (0.8.3-1) ...
+Selecting previously unselected package libexpat1:amd64.
+Preparing to unpack .../09-libexpat1_2.2.0-2+deb9u3_amd64.deb ...
+Unpacking libexpat1:amd64 (2.2.0-2+deb9u3) ...
+Selecting previously unselected package libpng16-16:amd64.
+Preparing to unpack .../10-libpng16-16_1.6.28-1+deb9u1_amd64.deb ...
+Unpacking libpng16-16:amd64 (1.6.28-1+deb9u1) ...
+Selecting previously unselected package libfreetype6:amd64.
+Preparing to unpack .../11-libfreetype6_2.6.3-3.2_amd64.deb ...
+Unpacking libfreetype6:amd64 (2.6.3-3.2) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../12-libfontconfig1_2.11.0-6.7+b1_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.11.0-6.7+b1) ...
+Selecting previously unselected package libjpeg62-turbo:amd64.
+Preparing to unpack .../13-libjpeg62-turbo_1%3a1.5.1-2_amd64.deb ...
+Unpacking libjpeg62-turbo:amd64 (1:1.5.1-2) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../14-libjbig0_2.1-3.1+b2_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1+b2) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../15-libtiff5_4.0.8-2+deb9u4_amd64.deb ...
+Unpacking libtiff5:amd64 (4.0.8-2+deb9u4) ...
+Selecting previously unselected package libwebp6:amd64.
+Preparing to unpack .../16-libwebp6_0.5.2-1_amd64.deb ...
+Unpacking libwebp6:amd64 (0.5.2-1) ...
+Selecting previously unselected package libxdmcp6:amd64.
+Preparing to unpack .../17-libxdmcp6_1%3a1.1.2-3_amd64.deb ...
+Unpacking libxdmcp6:amd64 (1:1.1.2-3) ...
+Selecting previously unselected package libxcb1:amd64.
+Preparing to unpack .../18-libxcb1_1.12-1_amd64.deb ...
+Unpacking libxcb1:amd64 (1.12-1) ...
+Selecting previously unselected package libx11-data.
+Preparing to unpack .../19-libx11-data_2%3a1.6.4-3+deb9u1_all.deb ...
+Unpacking libx11-data (2:1.6.4-3+deb9u1) ...
+Selecting previously unselected package libx11-6:amd64.
+Preparing to unpack .../20-libx11-6_2%3a1.6.4-3+deb9u1_amd64.deb ...
+Unpacking libx11-6:amd64 (2:1.6.4-3+deb9u1) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../21-libxpm4_1%3a3.5.12-1_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../22-libgd3_2.2.4-2+deb9u5_amd64.deb ...
+Unpacking libgd3:amd64 (2.2.4-2+deb9u5) ...
+Selecting previously unselected package libgeoip1:amd64.
+Preparing to unpack .../23-libgeoip1_1.6.9-4_amd64.deb ...
+Unpacking libgeoip1:amd64 (1.6.9-4) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../24-nginx-common_1.10.3-1+deb9u3_all.deb ...
+Unpacking nginx-common (1.10.3-1+deb9u3) ...
+Selecting previously unselected package libnginx-mod-http-auth-pam.
+Preparing to unpack .../25-libnginx-mod-http-auth-pam_1.10.3-1+deb9u3_amd64.deb ...
+Unpacking libnginx-mod-http-auth-pam (1.10.3-1+deb9u3) ...
+Selecting previously unselected package libnginx-mod-http-dav-ext.
+Preparing to unpack .../26-libnginx-mod-http-dav-ext_1.10.3-1+deb9u3_amd64.deb ...
+Unpacking libnginx-mod-http-dav-ext (1.10.3-1+deb9u3) ...
+Selecting previously unselected package libnginx-mod-http-echo.
+Preparing to unpack .../27-libnginx-mod-http-echo_1.10.3-1+deb9u3_amd64.deb ...
+Unpacking libnginx-mod-http-echo (1.10.3-1+deb9u3) ...
+Selecting previously unselected package libnginx-mod-http-geoip.
+Preparing to unpack .../28-libnginx-mod-http-geoip_1.10.3-1+deb9u3_amd64.deb ...
+Unpacking libnginx-mod-http-geoip (1.10.3-1+deb9u3) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../29-libnginx-mod-http-image-filter_1.10.3-1+deb9u3_amd64.deb ...
+Unpacking libnginx-mod-http-image-filter (1.10.3-1+deb9u3) ...
+Selecting previously unselected package libnginx-mod-http-subs-filter.
+Preparing to unpack .../30-libnginx-mod-http-subs-filter_1.10.3-1+deb9u3_amd64.deb ...
+Unpacking libnginx-mod-http-subs-filter (1.10.3-1+deb9u3) ...
+Selecting previously unselected package libnginx-mod-http-upstream-fair.
+Preparing to unpack .../31-libnginx-mod-http-upstream-fair_1.10.3-1+deb9u3_amd64.deb ...
+Unpacking libnginx-mod-http-upstream-fair (1.10.3-1+deb9u3) ...
+Selecting previously unselected package libxslt1.1:amd64.
+Preparing to unpack .../32-libxslt1.1_1.1.29-2.1+deb9u1_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.29-2.1+deb9u1) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../33-libnginx-mod-http-xslt-filter_1.10.3-1+deb9u3_amd64.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.10.3-1+deb9u3) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../34-libnginx-mod-mail_1.10.3-1+deb9u3_amd64.deb ...
+Unpacking libnginx-mod-mail (1.10.3-1+deb9u3) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../35-libnginx-mod-stream_1.10.3-1+deb9u3_amd64.deb ...
+Unpacking libnginx-mod-stream (1.10.3-1+deb9u3) ...
+Selecting previously unselected package nginx-full.
+Preparing to unpack .../36-nginx-full_1.10.3-1+deb9u3_amd64.deb ...
+Unpacking nginx-full (1.10.3-1+deb9u3) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../37-nginx_1.10.3-1+deb9u3_all.deb ...
+Unpacking nginx (1.10.3-1+deb9u3) ...
+Selecting previously unselected package xml-core.
+Preparing to unpack .../38-xml-core_0.17_all.deb ...
+Unpacking xml-core (0.17) ...
+Setting up libexpat1:amd64 (2.2.0-2+deb9u3) ...
+Setting up libjpeg62-turbo:amd64 (1:1.5.1-2) ...
+Setting up geoip-database (20170512-1) ...
+Setting up libpng16-16:amd64 (1.6.28-1+deb9u1) ...
+Setting up libjbig0:amd64 (2.1-3.1+b2) ...
+Setting up fonts-dejavu-core (2.37-1) ...
+Setting up nginx-common (1.10.3-1+deb9u3) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.24.1 /usr/local/share/perl/5.24.1 /usr/lib/x86_64-linux-gnu/perl5/5.24 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.24 /usr/share/perl/5.24 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up libnginx-mod-http-subs-filter (1.10.3-1+deb9u3) ...
+Setting up libtiff5:amd64 (4.0.8-2+deb9u4) ...
+Setting up sgml-base (1.29) ...
+Setting up libgeoip1:amd64 (1.6.9-4) ...
+Setting up libicu57:amd64 (57.1-6+deb9u3) ...
+Setting up libbsd0:amd64 (0.8.3-1) ...
+Setting up ucf (3.0036) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.24.1 /usr/local/share/perl/5.24.1 /usr/lib/x86_64-linux-gnu/perl5/5.24 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.24 /usr/share/perl/5.24 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up libxml2:amd64 (2.9.4+dfsg1-2.2+deb9u2) ...
+Setting up libfreetype6:amd64 (2.6.3-3.2) ...
+Setting up libxslt1.1:amd64 (1.1.29-2.1+deb9u1) ...
+Processing triggers for libc-bin (2.24-11+deb9u4) ...
+Setting up libnginx-mod-http-auth-pam (1.10.3-1+deb9u3) ...
+Setting up libnginx-mod-http-dav-ext (1.10.3-1+deb9u3) ...
+Setting up libnginx-mod-mail (1.10.3-1+deb9u3) ...
+Setting up libnginx-mod-http-xslt-filter (1.10.3-1+deb9u3) ...
+Setting up libnginx-mod-http-upstream-fair (1.10.3-1+deb9u3) ...
+Setting up libxdmcp6:amd64 (1:1.1.2-3) ...
+Setting up xml-core (0.17) ...
+Setting up libnginx-mod-http-geoip (1.10.3-1+deb9u3) ...
+Setting up libx11-data (2:1.6.4-3+deb9u1) ...
+Setting up libxau6:amd64 (1:1.0.8-1) ...
+Setting up libwebp6:amd64 (0.5.2-1) ...
+Setting up fontconfig-config (2.11.0-6.7) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.24.1 /usr/local/share/perl/5.24.1 /usr/lib/x86_64-linux-gnu/perl5/5.24 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl/5.24 /usr/share/perl/5.24 /usr/local/lib/site_perl /usr/lib/x86_64-linux-gnu/perl-base .) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 7.)
+debconf: falling back to frontend: Teletype
+Setting up libnginx-mod-stream (1.10.3-1+deb9u3) ...
+Setting up libnginx-mod-http-echo (1.10.3-1+deb9u3) ...
+Setting up libxcb1:amd64 (1.12-1) ...
+Setting up libfontconfig1:amd64 (2.11.0-6.7+b1) ...
+Setting up libx11-6:amd64 (2:1.6.4-3+deb9u1) ...
+Setting up libxpm4:amd64 (1:3.5.12-1) ...
+Setting up libgd3:amd64 (2.2.4-2+deb9u5) ...
+Setting up libnginx-mod-http-image-filter (1.10.3-1+deb9u3) ...
+Setting up nginx-full (1.10.3-1+deb9u3) ...
+invoke-rc.d: could not determine current runlevel
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up nginx (1.10.3-1+deb9u3) ...
+Processing triggers for libc-bin (2.24-11+deb9u4) ...
+Processing triggers for sgml-base (1.29) ...
+[36mINFO[0m[1605] Taking snapshot of full filesystem...        
+[36mINFO[0m[1608] RUN mkdir -p /app/                           
+[36mINFO[0m[1608] cmd: /bin/sh                                 
+[36mINFO[0m[1608] args: [-c mkdir -p /app/]                    
+[36mINFO[0m[1608] Pushing layer registry.cn-zhangjiakou.aliyuncs.com/todo/cache:181c104b38900028b8176e181e9003ac960ea65efd477bbd03a3a913befe8094 to cache now 
+[36mINFO[0m[1608] Taking snapshot of full filesystem...        
+[36mINFO[0m[1609] WORKDIR /usr/src/app                         
+[36mINFO[0m[1609] cmd: workdir                                 
+[36mINFO[0m[1609] Changed working directory to /usr/src/app    
+[36mINFO[0m[1609] Creating directory /usr/src/app              
+[36mINFO[0m[1609] Taking snapshot of files...                  
+[36mINFO[0m[1609] Pushing layer registry.cn-zhangjiakou.aliyuncs.com/todo/cache:c00a33b2939d246a8e992104a33ba63180ba59590281d3793ffb86d6e8759429 to cache now 
+[36mINFO[0m[1610] Using files from context: [/workspace/source/package.json /workspace/source/package-lock.json] 
+[36mINFO[0m[1610] COPY ["package.json", "package-lock.json*", "./"] 
+[36mINFO[0m[1610] Taking snapshot of files...                  
+[36mINFO[0m[1610] RUN npm install                              
+[36mINFO[0m[1610] cmd: /bin/sh                                 
+[36mINFO[0m[1610] args: [-c npm install]                       
+
+> uglifyjs-webpack-plugin@0.4.6 postinstall /usr/src/app/node_modules/webpack/node_modules/uglifyjs-webpack-plugin
+> node lib/post_install.js
+
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@1.2.7 (node_modules/fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.2.7: wanted {"os":"darwin","arch":"any"} (current: {"os":"linux","arch":"x64"})
+
+added 1106 packages from 650 contributors and audited 11516 packages in 81.473s
+found 313 vulnerabilities (1 low, 9 moderate, 303 high)
+  run `npm audit fix` to fix them, or `npm audit` for details
+[36mINFO[0m[1693] Taking snapshot of full filesystem...        
+[36mINFO[0m[1701] Using files from context: [/workspace/source] 
+[36mINFO[0m[1701] Pushing layer registry.cn-zhangjiakou.aliyuncs.com/todo/cache:73840b4959d184478c28da49e69d47417a8daf42cea99bf73e3c8f0ed76e8f03 to cache now 
+[36mINFO[0m[1702] COPY . .                                     
+[36mINFO[0m[1707] Taking snapshot of files...                  
+[36mINFO[0m[1711] RUN npm run build                            
+[36mINFO[0m[1711] cmd: /bin/sh                                 
+[36mINFO[0m[1711] args: [-c npm run build]                     
+
+> vue@1.0.0 build /usr/src/app
+> node build/build.js
+
+Hash: [1mb9a08d8b68e972d9dcdf[39m[22m
+Version: webpack [1m3.12.0[39m[22m
+Time: [1m19721[39m[22mms
+                                                  [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m       [1mChunk Names[39m[22m
+    [1m[32mstatic/css/app.f6deb73417486fd67820a293a2cc96f9.css[39m[22m     198 kB       [1m1[39m[22m  [1m[32m[emitted][39m[22m         app
+                [1m[32mstatic/fonts/element-icons.535877f.woff[39m[22m    28.2 kB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+               [1m[33mstatic/js/vendor.714820829663534466e1.js[39m[22m     [1m[33m759 kB[39m[22m       [1m0[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  vendor
+                  [1m[32mstatic/js/app.03c6bc8fd102b2a316af.js[39m[22m    7.79 kB       [1m1[39m[22m  [1m[32m[emitted][39m[22m         app
+             [1m[32mstatic/js/manifest.2ae2e69a05c33dfc65f8.js[39m[22m  857 bytes       [1m2[39m[22m  [1m[32m[emitted][39m[22m         manifest
+                 [1m[32mstatic/fonts/element-icons.732389d.ttf[39m[22m      56 kB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+[1m[32mstatic/css/app.f6deb73417486fd67820a293a2cc96f9.css.map[39m[22m     289 kB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+           [1m[32mstatic/js/vendor.714820829663534466e1.js.map[39m[22m       3 MB       [1m0[39m[22m  [1m[32m[emitted][39m[22m         vendor
+              [1m[32mstatic/js/app.03c6bc8fd102b2a316af.js.map[39m[22m    39.8 kB       [1m1[39m[22m  [1m[32m[emitted][39m[22m         app
+         [1m[32mstatic/js/manifest.2ae2e69a05c33dfc65f8.js.map[39m[22m    4.97 kB       [1m2[39m[22m  [1m[32m[emitted][39m[22m         manifest
+                                             [1m[32mindex.html[39m[22m  505 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+
+  Build complete.
+
+  Tip: built files are meant to be served over an HTTP server.
+  Opening index.html over file:// won't work.
+
+[36mINFO[0m[1734] Taking snapshot of full filesystem...        
+[36mINFO[0m[1739] RUN ln -sf /dev/stdout /var/log/nginx/access.log 	&& ln -sf /dev/stderr /var/log/nginx/error.log 
+[36mINFO[0m[1739] cmd: /bin/sh                                 
+[36mINFO[0m[1739] args: [-c ln -sf /dev/stdout /var/log/nginx/access.log 	&& ln -sf /dev/stderr /var/log/nginx/error.log] 
+[36mINFO[0m[1739] Pushing layer registry.cn-zhangjiakou.aliyuncs.com/todo/cache:f9c725616e17fc6b940674bacb7aa7aa891e0f3b838e11c404253535d11db7a3 to cache now 
+[36mINFO[0m[1739] Taking snapshot of full filesystem...        
+[36mINFO[0m[1742] RUN cp -r dist/* /app/     && rm -rf /user/src/app 
+[36mINFO[0m[1742] cmd: /bin/sh                                 
+[36mINFO[0m[1742] args: [-c cp -r dist/* /app/     && rm -rf /user/src/app] 
+[36mINFO[0m[1742] Pushing layer registry.cn-zhangjiakou.aliyuncs.com/todo/cache:84a3bae2c85f6e65afbc03ad3c8b8969ea8ef74de4e5c879aca386b593b79927 to cache now 
+[36mINFO[0m[1742] Taking snapshot of full filesystem...        
+[36mINFO[0m[1745] Pushing layer registry.cn-zhangjiakou.aliyuncs.com/todo/cache:489390054c762b512b9fa3bd51a1f016754c44c29103607f2cfff6105ad8c78f to cache now 
+[36mINFO[0m[1745] Using files from context: [/workspace/source/nginx.conf] 
+[36mINFO[0m[1745] COPY ./nginx.conf /etc/nginx/nginx.conf      
+[36mINFO[0m[1745] Taking snapshot of files...                  
+[36mINFO[0m[1745] ENV PORT 8080                                
+[36mINFO[0m[1745] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[1745] EXPOSE 8080                                  
+[36mINFO[0m[1745] cmd: EXPOSE                                  
+[36mINFO[0m[1745] Adding exposed port: 8080/tcp                
+[36mINFO[0m[1745] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[1745] CMD sh -c "exec nginx -c /etc/nginx/nginx.conf -g 'daemon off;'" 
+[36mINFO[0m[1745] No files changed in this command, skipping snapshotting. 
+[33mWARN[0m[1746] error uploading layer to cache: failed to push to destination registry.cn-zhangjiakou.aliyuncs.com/todo/cache:181c104b38900028b8176e181e9003ac960ea65efd477bbd03a3a913befe8094: unsupported status code 401; body:  
+2020/01/07 08:57:32 pushed blob: sha256:6087e65f00c156111f01a30f565c12cb6d5815cea12aa4dbcc9a27cbf82244b3
+2020/01/07 08:57:32 pushed blob: sha256:d67acba3e5e550e1925ffca671fd4d28f8fd612fc58f03fece89c963874a83d2
+2020/01/07 08:57:32 pushed blob: sha256:8de2c348e75bd86bec3b5f98e92ce613e843d69f43d2d536c00605ea2747f88f
+2020/01/07 08:57:33 pushed blob: sha256:e3e0859b1ad452c6894501f3324a8edd26aaa8d2e82836c0701d0d30d6c8aabc
+2020/01/07 08:57:33 pushed blob: sha256:ff9d44131b353676c4d9bec360f43e3da5d86c316c0cc989c20c98ffb3bae15e
+2020/01/07 08:57:33 pushed blob: sha256:ab7da54b90bc7478e1939cabffacf19eb49bcbb2da28c8867184fd5b5c2a1f7e
+2020/01/07 08:57:37 pushed blob: sha256:cb7cdf1316eefaa5a3a85a402c6c435e07b133361c6791a17bd7a573af700009
+2020/01/07 08:57:39 pushed blob: sha256:2706bdf8025024895de9fff9e48694e4ec349bbdf066da327afbeb8ce6d9956f
+2020/01/07 08:57:46 pushed blob: sha256:4a1e8d5ac631b85e42ec3cff77b00cbbf4383fa619d1e5d4dffecf5d4a7319bf
+2020/01/07 08:57:49 pushed blob: sha256:60c92683608e806d32fc7eb6809989f73d949253f9614355b87d1a6fb6faa8dd
+2020/01/07 08:57:51 pushed blob: sha256:79648cb9a4b92bda1048504df090d6e40ac1dbffa3d91b29fade0839dc9cd083
+2020/01/07 09:01:25 pushed blob: sha256:804555ee037604c40de144f9f8da0d826d38db82f15d74cded32790fe279a8f6
+2020/01/07 09:01:26 pushed blob: sha256:f045785bcd12ae832f6d7b65ae8ae64703d7320a19d4b017a1840412c424d11f
+2020/01/07 09:02:04 pushed blob: sha256:467645c39226594c7057ca3eabe26bc8d0edf5d61e41b6123f9d7b2d0b509367
+2020/01/07 09:02:18 pushed blob: sha256:1057010cfeb7fa711e6ff9a14c0ba071ddcc9c88b69d5db350c7d44b2d600fcb
+2020/01/07 09:02:57 pushed blob: sha256:5a31bfa31f09e5b91f0a79d8193f71b02b2011142ff19f71c0230b06531c4771
+2020/01/07 09:02:58 registry.cn-zhangjiakou.aliyuncs.com/******************/microproject-ui:0.0.10: digest: sha256:5d3102c778369920d622fae9a6d79ac30e25a81d5ddc02d5cc678faba72302df size: 2704
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/microproject-ui to an unshallow repository
+Generating change log from git ref 6e75cbc5c41f76cc07c7bf80e2842624267d7bf4 => 4d878c0f9eeb88b57f500b16264505571ad2a9c9
+Associating user x-0 in users.jenkins.io with email 1032465445@qq.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 49e7f9597701e55a6bb5d726349e73ca83d012b9 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email 1032465445@qq.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 49e7f9597701e55a6bb5d726349e73ca83d012b9 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for ******************/microproject-ui and tag v0.0.10 so creating a new release
+Updated the release information at https://github.com/******************/microproject-ui/releases/tag/v0.0.10
+generated: /workspace/source/charts/microproject-ui/templates/release.yaml
+Created Release microproject-ui-0-0-10 resource in namespace **
+Updating PipelineActivity ******************-microproject-ui-master-4 with version 0.0.10
+Updated PipelineActivities ******************-microproject-ui-master-4 with release notes URL: https://github.com/******************/microproject-ui/releases/tag/v0.0.10
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file microproject-ui-0.0.10.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mcirclelightindream-microproject-6l5df-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+Promoting app microproject-ui version 0.0.10 to namespace **-staging
+Created Pull Request: https://github.com/******************/environment-deathmoor-staging/pull/3
+WARNING: Failed to query the Pull Request last commit status for https://github.com/******************/environment-deathmoor-staging/pull/3 ref 7db9e7147264f408dcc2cd1eb760134c77e9f26b Could not find a status for repository ******************/environment-deathmoor-staging with ref 7db9e7147264f408dcc2cd1eb760134c77e9f26b
+Pull Request https://github.com/******************/environment-deathmoor-staging/pull/3 is merged at sha e93d248a25d2c5c9bfda6e79a491181c8cbf9ef5
+Pull Request merged but we are not waiting for the update pipeline to complete!
